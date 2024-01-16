@@ -37,6 +37,14 @@
 		6E3CBCC62B567D52007B9FF9 /* BeerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBCC52B567D52007B9FF9 /* BeerTableViewController.swift */; };
 		6E3CBCC92B567F1B007B9FF9 /* BeerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBCC72B567F1B007B9FF9 /* BeerTableViewCell.swift */; };
 		6E3CBCCA2B567F1B007B9FF9 /* BeerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E3CBCC82B567F1B007B9FF9 /* BeerTableViewCell.xib */; };
+		6E3CBCD72B56A2AC007B9FF9 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBCD62B56A2AC007B9FF9 /* APIRequest.swift */; };
+		6E3CBCDA2B56A2EA007B9FF9 /* Host.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBCD92B56A2EA007B9FF9 /* Host.swift */; };
+		6E3CBCDC2B56A34A007B9FF9 /* Scheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBCDB2B56A34A007B9FF9 /* Scheme.swift */; };
+		6E3CBCDE2B56A3CD007B9FF9 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBCDD2B56A3CD007B9FF9 /* Endpoint.swift */; };
+		6E3CBCE02B56A59D007B9FF9 /* LottoAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBCDF2B56A59D007B9FF9 /* LottoAPIEndpoint.swift */; };
+		6E3CBCE22B56A61A007B9FF9 /* LottoAPIParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBCE12B56A61A007B9FF9 /* LottoAPIParameter.swift */; };
+		6E3CBCE42B56A908007B9FF9 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBCE32B56A908007B9FF9 /* Array+.swift */; };
+		6E3CBCE62B56ADB5007B9FF9 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBCE52B56ADB5007B9FF9 /* APIError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +79,14 @@
 		6E3CBCC52B567D52007B9FF9 /* BeerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerTableViewController.swift; sourceTree = "<group>"; };
 		6E3CBCC72B567F1B007B9FF9 /* BeerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerTableViewCell.swift; sourceTree = "<group>"; };
 		6E3CBCC82B567F1B007B9FF9 /* BeerTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerTableViewCell.xib; sourceTree = "<group>"; };
+		6E3CBCD62B56A2AC007B9FF9 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		6E3CBCD92B56A2EA007B9FF9 /* Host.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Host.swift; sourceTree = "<group>"; };
+		6E3CBCDB2B56A34A007B9FF9 /* Scheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheme.swift; sourceTree = "<group>"; };
+		6E3CBCDD2B56A3CD007B9FF9 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		6E3CBCDF2B56A59D007B9FF9 /* LottoAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoAPIEndpoint.swift; sourceTree = "<group>"; };
+		6E3CBCE12B56A61A007B9FF9 /* LottoAPIParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottoAPIParameter.swift; sourceTree = "<group>"; };
+		6E3CBCE32B56A908007B9FF9 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		6E3CBCE52B56ADB5007B9FF9 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +162,8 @@
 		6E3CBC7F2B5669D0007B9FF9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				6E3CBC892B566F9A007B9FF9 /* Lotto.swift */,
+				6E3CBCD42B56A276007B9FF9 /* Network */,
+				6E3CBCD22B56A267007B9FF9 /* Local */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -165,7 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				6E3CBC822B566AB3007B9FF9 /* Constant.swift */,
-				6E3CBC872B566F41007B9FF9 /* APIManager.swift */,
+				6E3CBCE32B56A908007B9FF9 /* Array+.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -203,6 +220,8 @@
 		6E3CBCA52B5672A0007B9FF9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				6E3CBCCF2B56A1E5007B9FF9 /* New Group */,
+				6E3CBCCE2B56A1DE007B9FF9 /* Model */,
 				6E3CBCBE2B567913007B9FF9 /* Beer.swift */,
 			);
 			path = Data;
@@ -265,6 +284,75 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E3CBCCE2B56A1DE007B9FF9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6E3CBCCF2B56A1E5007B9FF9 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		6E3CBCD12B56A252007B9FF9 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				6E3CBCE52B56ADB5007B9FF9 /* APIError.swift */,
+				6E3CBC872B566F41007B9FF9 /* APIManager.swift */,
+				6E3CBCD52B56A297007B9FF9 /* APIRequest */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		6E3CBCD22B56A267007B9FF9 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				6E3CBCD32B56A272007B9FF9 /* Model */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		6E3CBCD32B56A272007B9FF9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6E3CBC892B566F9A007B9FF9 /* Lotto.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6E3CBCD42B56A276007B9FF9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6E3CBCD12B56A252007B9FF9 /* HTTP */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		6E3CBCD52B56A297007B9FF9 /* APIRequest */ = {
+			isa = PBXGroup;
+			children = (
+				6E3CBCD62B56A2AC007B9FF9 /* APIRequest.swift */,
+				6E3CBCDB2B56A34A007B9FF9 /* Scheme.swift */,
+				6E3CBCD92B56A2EA007B9FF9 /* Host.swift */,
+				6E3CBCD82B56A2CA007B9FF9 /* Endpoint */,
+			);
+			path = APIRequest;
+			sourceTree = "<group>";
+		};
+		6E3CBCD82B56A2CA007B9FF9 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				6E3CBCDD2B56A3CD007B9FF9 /* Endpoint.swift */,
+				6E3CBCDF2B56A59D007B9FF9 /* LottoAPIEndpoint.swift */,
+				6E3CBCE12B56A61A007B9FF9 /* LottoAPIParameter.swift */,
+			);
+			path = Endpoint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,12 +469,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E3CBCE42B56A908007B9FF9 /* Array+.swift in Sources */,
+				6E3CBCDC2B56A34A007B9FF9 /* Scheme.swift in Sources */,
 				6E3CBC8A2B566F9A007B9FF9 /* Lotto.swift in Sources */,
+				6E3CBCE02B56A59D007B9FF9 /* LottoAPIEndpoint.swift in Sources */,
+				6E3CBCD72B56A2AC007B9FF9 /* APIRequest.swift in Sources */,
 				6E3CBC6E2B56642D007B9FF9 /* LottoViewController.swift in Sources */,
+				6E3CBCDA2B56A2EA007B9FF9 /* Host.swift in Sources */,
 				6E3CBC6A2B56642D007B9FF9 /* AppDelegate.swift in Sources */,
 				6E3CBC882B566F41007B9FF9 /* APIManager.swift in Sources */,
 				6E3CBC6C2B56642D007B9FF9 /* SceneDelegate.swift in Sources */,
 				6E3CBC832B566AB3007B9FF9 /* Constant.swift in Sources */,
+				6E3CBCDE2B56A3CD007B9FF9 /* Endpoint.swift in Sources */,
+				6E3CBCE62B56ADB5007B9FF9 /* APIError.swift in Sources */,
+				6E3CBCE22B56A61A007B9FF9 /* LottoAPIParameter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
