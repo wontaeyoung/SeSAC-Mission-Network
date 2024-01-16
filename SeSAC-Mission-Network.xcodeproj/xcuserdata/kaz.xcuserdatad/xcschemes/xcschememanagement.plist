@@ -9,10 +9,18 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>SeSAC-Mission-Network.xcscheme_^#shared#^_</key>
+		<key>Lotto.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>6E3CBC652B56642D007B9FF9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

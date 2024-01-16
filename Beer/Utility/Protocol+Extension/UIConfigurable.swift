@@ -14,6 +14,7 @@ protocol UIConfigurable: UIViewController {
 protocol Registerable: UIConfigurable {
   func register<T: CellConfigurable>(cellType: T.Type)
 }
+
 protocol TableUIConfigurable: Registerable {
   func configureTableView()
 }
