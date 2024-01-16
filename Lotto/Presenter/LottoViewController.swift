@@ -15,13 +15,18 @@ final class LottoViewController: UIViewController {
   @IBOutlet var ballUIViews: [UIView]!
   @IBOutlet var ballLabels: [UILabel]!
   
+  private let manager = APIManager()
   private let lottoPickerView = UIPickerView()
-  private let numberList: [Int] = (1...1025).reversed()
+  private let numberList: [Int] = (1...1102).reversed()
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
     configureUI()
+    
+    let startNumber = numberList.first!
+    numberLabel.text = "\(startNumber)회차"
+    manager.callRequest(number: startNumber, completionHandler: self.setLottoResult(_:))
   }
   
   override func viewDidLayoutSubviews() {
@@ -29,10 +34,23 @@ final class LottoViewController: UIViewController {
     
     configureBallUIViews()
   }
+  
+  private func text(row: Int) -> String {
+    return "\(numberList[row])회차"
+  }
 }
 
 // MARK: - Configure
 extension LottoViewController {
+  private func setLottoResult(_ lotto: Lotto) {
+    ballLabels[0].text = lotto.drwtNo1.description
+    ballLabels[1].text = lotto.drwtNo2.description
+    ballLabels[2].text = lotto.drwtNo3.description
+    ballLabels[3].text = lotto.drwtNo4.description
+    ballLabels[4].text = lotto.drwtNo5.description
+    ballLabels[5].text = lotto.drwtNo6.description
+  }
+  
   func configureUI() {
     configureNumberLabel()
     configureTextField()
@@ -99,6 +117,9 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     didSelectRow row: Int,
     inComponent component: Int
   ) {
+    let number: Int = numberList[row]
+    
+    manager.callRequest(number: number, completionHandler: self.setLottoResult(_:))
     numberLabel.text = text(row: row)
   }
   
@@ -108,9 +129,5 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     forComponent component: Int
   ) -> String? {
     return text(row: row)
-  }
-  
-  private func text(row: Int) -> String {
-    return "\(numberList[row])회차"
   }
 }
