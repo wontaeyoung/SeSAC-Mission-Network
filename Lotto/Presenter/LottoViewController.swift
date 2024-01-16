@@ -25,8 +25,12 @@ final class LottoViewController: UIViewController {
     configureUI()
     
     let startNumber = numberList.first!
+    let request: APIRequest = getLottoRequest(round: startNumber)
+    
     numberLabel.text = "\(startNumber)회차"
-    manager.callRequest(number: startNumber, completionHandler: self.setLottoResult(_:))
+    manager.callRequest(request) { lotto in
+      self.setLottoResult(lotto)
+    }
   }
   
   override func viewDidLayoutSubviews() {
@@ -37,6 +41,14 @@ final class LottoViewController: UIViewController {
   
   private func text(row: Int) -> String {
     return "\(numberList[row])회차"
+  }
+  
+  private func getLottoRequest(round: Int) -> APIRequest {
+    return APIRequest(
+      scheme: .https,
+      host: .lotto,
+      endpoint: LottoAPIEndpoint.getNumber(round: round)
+    )
   }
 }
 
@@ -118,9 +130,12 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     inComponent component: Int
   ) {
     let number: Int = numberList[row]
+    let request: APIRequest = getLottoRequest(round: number)
     
-    manager.callRequest(number: number, completionHandler: self.setLottoResult(_:))
     numberLabel.text = text(row: row)
+    manager.callRequest(request) { lotto in
+      self.setLottoResult(lotto)
+    }
   }
   
   func pickerView(
