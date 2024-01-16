@@ -15,7 +15,7 @@ protocol Registerable: UIConfigurable {
   func register<T: CellConfigurable>(cellType: T.Type)
 }
 
-protocol TableUIConfigurable: Registerable {
+protocol TableUIConfigurable: Registerable, UITableViewDelegate, UITableViewDataSource {
   func configureTableView()
 }
 

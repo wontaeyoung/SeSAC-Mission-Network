@@ -70,7 +70,7 @@
                             <constraint firstItem="H51-fY-WK0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wCe-Rd-KaI"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Recommend" id="fiL-Ci-KqO"/>
+                    <tabBarItem key="tabBarItem" title="Recommend" selectedImage="wineglass.fill" catalog="system" id="fiL-Ci-KqO"/>
                     <connections>
                         <outlet property="beerImageView" destination="vIR-Y5-Fwb" id="zop-f7-JAU"/>
                         <outlet property="descriptionLabel" destination="mpO-o8-RRb" id="a0A-Fj-dEx"/>
@@ -81,6 +81,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1057.2519083969464" y="-34.507042253521128"/>
+        </scene>
+        <!--BeerList-->
+        <scene sceneID="Zsb-lQ-GaC">
+            <objects>
+                <viewController id="HvV-mI-T7a" customClass="BeerTableViewController" customModule="Beer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LFB-8d-zFk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cA3-PT-ldu">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Z4-Mf-8mk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Z4-Mf-8mk" firstAttribute="bottom" secondItem="cA3-PT-ldu" secondAttribute="bottom" id="9kv-h2-i9F"/>
+                            <constraint firstItem="cA3-PT-ldu" firstAttribute="top" secondItem="0Z4-Mf-8mk" secondAttribute="top" id="bPY-Kj-24i"/>
+                            <constraint firstItem="cA3-PT-ldu" firstAttribute="leading" secondItem="0Z4-Mf-8mk" secondAttribute="leading" id="gV1-Og-ccv"/>
+                            <constraint firstItem="0Z4-Mf-8mk" firstAttribute="trailing" secondItem="cA3-PT-ldu" secondAttribute="trailing" id="kss-9t-AvJ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="BeerList" selectedImage="list.dash" catalog="system" id="T8L-nH-3e3"/>
+                    <connections>
+                        <outlet property="beerTableView" destination="cA3-PT-ldu" id="YxR-Bg-0Ay"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0QX-DR-Pxi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="654"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="WMI-6J-AqL">
@@ -93,6 +124,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="rJB-VI-vXU"/>
+                        <segue destination="HvV-mI-T7a" kind="relationship" relationship="viewControllers" id="XYP-Db-ItU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3QO-A7-zIw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -101,6 +133,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="wineglass.fill" catalog="system" width="95" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
