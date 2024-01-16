@@ -17,6 +17,13 @@
 		6E3CBC862B566F2D007B9FF9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3CBC852B566F2D007B9FF9 /* Alamofire */; };
 		6E3CBC882B566F41007B9FF9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBC872B566F41007B9FF9 /* APIManager.swift */; };
 		6E3CBC8A2B566F9A007B9FF9 /* Lotto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBC892B566F9A007B9FF9 /* Lotto.swift */; };
+		6E3CBC922B567286007B9FF9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBC912B567286007B9FF9 /* AppDelegate.swift */; };
+		6E3CBC942B567286007B9FF9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBC932B567286007B9FF9 /* SceneDelegate.swift */; };
+		6E3CBC962B567286007B9FF9 /* RecommendBeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBC952B567286007B9FF9 /* RecommendBeerViewController.swift */; };
+		6E3CBC992B567286007B9FF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E3CBC972B567286007B9FF9 /* Main.storyboard */; };
+		6E3CBC9B2B567288007B9FF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E3CBC9A2B567288007B9FF9 /* Assets.xcassets */; };
+		6E3CBC9E2B567288007B9FF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E3CBC9C2B567288007B9FF9 /* LaunchScreen.storyboard */; };
+		6E3CBCAE2B567379007B9FF9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3CBCAD2B567379007B9FF9 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +38,14 @@
 		6E3CBC822B566AB3007B9FF9 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		6E3CBC872B566F41007B9FF9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		6E3CBC892B566F9A007B9FF9 /* Lotto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lotto.swift; sourceTree = "<group>"; };
+		6E3CBC8F2B567286007B9FF9 /* Beer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E3CBC912B567286007B9FF9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6E3CBC932B567286007B9FF9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		6E3CBC952B567286007B9FF9 /* RecommendBeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendBeerViewController.swift; sourceTree = "<group>"; };
+		6E3CBC982B567286007B9FF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6E3CBC9A2B567288007B9FF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6E3CBC9D2B567288007B9FF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6E3CBC9F2B567288007B9FF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +57,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6E3CBC8C2B567286007B9FF9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E3CBCAE2B567379007B9FF9 /* Kingfisher in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -49,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				6E3CBC682B56642D007B9FF9 /* Lotto */,
+				6E3CBC902B567286007B9FF9 /* Beer */,
 				6E3CBC672B56642D007B9FF9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				6E3CBC662B56642D007B9FF9 /* Lotto.app */,
+				6E3CBC8F2B567286007B9FF9 /* Beer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,6 +143,92 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		6E3CBC902B567286007B9FF9 /* Beer */ = {
+			isa = PBXGroup;
+			children = (
+				6E3CBCA32B56729B007B9FF9 /* App */,
+				6E3CBC9A2B567288007B9FF9 /* Assets.xcassets */,
+				6E3CBCA42B56729D007B9FF9 /* Config */,
+				6E3CBCA52B5672A0007B9FF9 /* Data */,
+				6E3CBCA62B5672A3007B9FF9 /* Presenter */,
+				6E3CBCA72B5672A5007B9FF9 /* Utility */,
+			);
+			path = Beer;
+			sourceTree = "<group>";
+		};
+		6E3CBCA32B56729B007B9FF9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				6E3CBC912B567286007B9FF9 /* AppDelegate.swift */,
+				6E3CBC932B567286007B9FF9 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6E3CBCA42B56729D007B9FF9 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				6E3CBC9F2B567288007B9FF9 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		6E3CBCA52B5672A0007B9FF9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		6E3CBCA62B5672A3007B9FF9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				6E3CBC9C2B567288007B9FF9 /* LaunchScreen.storyboard */,
+				6E3CBCA92B5672BE007B9FF9 /* List */,
+				6E3CBC972B567286007B9FF9 /* Main.storyboard */,
+				6E3CBCA82B5672B9007B9FF9 /* Recommend */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		6E3CBCA72B5672A5007B9FF9 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		6E3CBCA82B5672B9007B9FF9 /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				6E3CBC952B567286007B9FF9 /* RecommendBeerViewController.swift */,
+			);
+			path = Recommend;
+			sourceTree = "<group>";
+		};
+		6E3CBCA92B5672BE007B9FF9 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				6E3CBCAB2B5672D1007B9FF9 /* Cell */,
+				6E3CBCAA2B5672CD007B9FF9 /* Controller */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		6E3CBCAA2B5672CD007B9FF9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6E3CBCAB2B5672D1007B9FF9 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +252,26 @@
 			productReference = 6E3CBC662B56642D007B9FF9 /* Lotto.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6E3CBC8E2B567286007B9FF9 /* Beer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E3CBCA02B567288007B9FF9 /* Build configuration list for PBXNativeTarget "Beer" */;
+			buildPhases = (
+				6E3CBC8B2B567286007B9FF9 /* Sources */,
+				6E3CBC8C2B567286007B9FF9 /* Frameworks */,
+				6E3CBC8D2B567286007B9FF9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Beer;
+			packageProductDependencies = (
+				6E3CBCAD2B567379007B9FF9 /* Kingfisher */,
+			);
+			productName = Beer;
+			productReference = 6E3CBC8F2B567286007B9FF9 /* Beer.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -152,6 +283,9 @@
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					6E3CBC652B56642D007B9FF9 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					6E3CBC8E2B567286007B9FF9 = {
 						CreatedOnToolsVersion = 15.2;
 					};
 				};
@@ -167,12 +301,14 @@
 			mainGroup = 6E3CBC5D2B56642D007B9FF9;
 			packageReferences = (
 				6E3CBC842B566F2D007B9FF9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				6E3CBCAC2B567379007B9FF9 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 6E3CBC672B56642D007B9FF9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				6E3CBC652B56642D007B9FF9 /* Lotto */,
+				6E3CBC8E2B567286007B9FF9 /* Beer */,
 			);
 		};
 /* End PBXProject section */
@@ -185,6 +321,16 @@
 				6E3CBC762B56642F007B9FF9 /* LaunchScreen.storyboard in Resources */,
 				6E3CBC732B56642F007B9FF9 /* Assets.xcassets in Resources */,
 				6E3CBC712B56642D007B9FF9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6E3CBC8D2B567286007B9FF9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E3CBC9E2B567288007B9FF9 /* LaunchScreen.storyboard in Resources */,
+				6E3CBC9B2B567288007B9FF9 /* Assets.xcassets in Resources */,
+				6E3CBC992B567286007B9FF9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +350,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6E3CBC8B2B567286007B9FF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E3CBC962B567286007B9FF9 /* RecommendBeerViewController.swift in Sources */,
+				6E3CBC922B567286007B9FF9 /* AppDelegate.swift in Sources */,
+				6E3CBC942B567286007B9FF9 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -219,6 +375,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				6E3CBC752B56642F007B9FF9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6E3CBC972B567286007B9FF9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E3CBC982B567286007B9FF9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6E3CBC9C2B567288007B9FF9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6E3CBC9D2B567288007B9FF9 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -401,6 +573,62 @@
 			};
 			name = Release;
 		};
+		6E3CBCA12B567288007B9FF9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75QZ7682T2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Beer/Config/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Kaz.Beer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6E3CBCA22B567288007B9FF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 75QZ7682T2;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Beer/Config/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Kaz.Beer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -422,6 +650,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		6E3CBCA02B567288007B9FF9 /* Build configuration list for PBXNativeTarget "Beer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E3CBCA12B567288007B9FF9 /* Debug */,
+				6E3CBCA22B567288007B9FF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -433,6 +670,14 @@
 				minimumVersion = 5.8.1;
 			};
 		};
+		6E3CBCAC2B567379007B9FF9 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -440,6 +685,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6E3CBC842B566F2D007B9FF9 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		6E3CBCAD2B567379007B9FF9 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6E3CBCAC2B567379007B9FF9 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
