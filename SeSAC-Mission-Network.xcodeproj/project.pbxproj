@@ -24,6 +24,13 @@
 		6E3CBC9B2B567288007B9FF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E3CBC9A2B567288007B9FF9 /* Assets.xcassets */; };
 		6E3CBC9E2B567288007B9FF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E3CBC9C2B567288007B9FF9 /* LaunchScreen.storyboard */; };
 		6E3CBCAE2B567379007B9FF9 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 6E3CBCAD2B567379007B9FF9 /* Kingfisher */; };
+		6E3CBCB02B56748A007B9FF9 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBCAF2B56748A007B9FF9 /* Constant.swift */; };
+		6E3CBCB22B567510007B9FF9 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBCB12B567510007B9FF9 /* APIManager.swift */; };
+		6E3CBCB92B56777A007B9FF9 /* UITableView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBCB42B56777A007B9FF9 /* UITableView+.swift */; };
+		6E3CBCBA2B56777A007B9FF9 /* UILabel+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBCB52B56777A007B9FF9 /* UILabel+.swift */; };
+		6E3CBCBB2B56777A007B9FF9 /* CellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBCB62B56777A007B9FF9 /* CellConfigurable.swift */; };
+		6E3CBCBC2B56777A007B9FF9 /* UIConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBCB72B56777A007B9FF9 /* UIConfigurable.swift */; };
+		6E3CBCBD2B56777A007B9FF9 /* CellConfigurable+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3CBCB82B56777A007B9FF9 /* CellConfigurable+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +53,13 @@
 		6E3CBC9A2B567288007B9FF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E3CBC9D2B567288007B9FF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E3CBC9F2B567288007B9FF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E3CBCAF2B56748A007B9FF9 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		6E3CBCB12B567510007B9FF9 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		6E3CBCB42B56777A007B9FF9 /* UITableView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+.swift"; sourceTree = "<group>"; };
+		6E3CBCB52B56777A007B9FF9 /* UILabel+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+.swift"; sourceTree = "<group>"; };
+		6E3CBCB62B56777A007B9FF9 /* CellConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellConfigurable.swift; sourceTree = "<group>"; };
+		6E3CBCB72B56777A007B9FF9 /* UIConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConfigurable.swift; sourceTree = "<group>"; };
+		6E3CBCB82B56777A007B9FF9 /* CellConfigurable+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CellConfigurable+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +208,9 @@
 		6E3CBCA72B5672A5007B9FF9 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				6E3CBCAF2B56748A007B9FF9 /* Constant.swift */,
+				6E3CBCB12B567510007B9FF9 /* APIManager.swift */,
+				6E3CBCB32B567711007B9FF9 /* Protocol+Extension */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -227,6 +244,18 @@
 			children = (
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		6E3CBCB32B567711007B9FF9 /* Protocol+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6E3CBCB62B56777A007B9FF9 /* CellConfigurable.swift */,
+				6E3CBCB82B56777A007B9FF9 /* CellConfigurable+.swift */,
+				6E3CBCB72B56777A007B9FF9 /* UIConfigurable.swift */,
+				6E3CBCB52B56777A007B9FF9 /* UILabel+.swift */,
+				6E3CBCB42B56777A007B9FF9 /* UITableView+.swift */,
+			);
+			path = "Protocol+Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,7 +385,14 @@
 			files = (
 				6E3CBC962B567286007B9FF9 /* RecommendBeerViewController.swift in Sources */,
 				6E3CBC922B567286007B9FF9 /* AppDelegate.swift in Sources */,
+				6E3CBCBD2B56777A007B9FF9 /* CellConfigurable+.swift in Sources */,
+				6E3CBCBC2B56777A007B9FF9 /* UIConfigurable.swift in Sources */,
+				6E3CBCBB2B56777A007B9FF9 /* CellConfigurable.swift in Sources */,
+				6E3CBCB22B567510007B9FF9 /* APIManager.swift in Sources */,
+				6E3CBCB92B56777A007B9FF9 /* UITableView+.swift in Sources */,
+				6E3CBCBA2B56777A007B9FF9 /* UILabel+.swift in Sources */,
 				6E3CBC942B567286007B9FF9 /* SceneDelegate.swift in Sources */,
+				6E3CBCB02B56748A007B9FF9 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
