@@ -46,8 +46,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="hBE-VJ-UfD">
-                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="500" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Onl-za-EIT">
+                                <rect key="frame" x="106.66666666666667" y="714.66666666666663" width="179.66666666666663" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="character.bubble.he" catalog="system" title="다른 맥주 추천받기">
+                                    <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="recommendOtherButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tv4-9r-Pof"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="hBE-VJ-UfD">
+                                <rect key="frame" x="302" y="14" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -56,15 +66,17 @@
                             <constraint firstItem="vIR-Y5-Fwb" firstAttribute="top" secondItem="H51-fY-WK0" secondAttribute="bottom" constant="20" id="0Vp-QT-RS8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mpO-o8-RRb" secondAttribute="trailing" constant="20" id="1Tq-ad-qn3"/>
                             <constraint firstItem="hBE-VJ-UfD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4TI-Yh-60D"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mpO-o8-RRb" secondAttribute="bottom" constant="20" id="4w4-Eh-4Lo"/>
+                            <constraint firstItem="Onl-za-EIT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mpO-o8-RRb" secondAttribute="bottom" constant="20" id="4VB-7M-OS1"/>
                             <constraint firstItem="4aC-La-lMk" firstAttribute="top" secondItem="vIR-Y5-Fwb" secondAttribute="bottom" constant="20" id="DmJ-uu-hsj"/>
                             <constraint firstItem="4aC-La-lMk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FcO-bX-vcN"/>
                             <constraint firstItem="vIR-Y5-Fwb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HKM-iJ-pFj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Onl-za-EIT" secondAttribute="bottom" constant="20" id="OFq-ge-gYW"/>
                             <constraint firstItem="hBE-VJ-UfD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OSi-na-d0l"/>
                             <constraint firstItem="mpO-o8-RRb" firstAttribute="top" secondItem="4aC-La-lMk" secondAttribute="bottom" constant="20" id="QNc-0i-uwX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4aC-La-lMk" secondAttribute="trailing" constant="20" id="VWo-Iw-aPe"/>
                             <constraint firstItem="H51-fY-WK0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="i0q-UJ-UWr"/>
                             <constraint firstItem="mpO-o8-RRb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iIR-Kw-fpb"/>
+                            <constraint firstItem="Onl-za-EIT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kPo-JB-ADi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vIR-Y5-Fwb" secondAttribute="trailing" constant="20" id="oPd-Qk-vxT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H51-fY-WK0" secondAttribute="trailing" constant="20" id="qTd-fo-Ptn"/>
                             <constraint firstItem="H51-fY-WK0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="wCe-Rd-KaI"/>
@@ -133,10 +145,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="character.bubble.he" catalog="system" width="128" height="110"/>
         <image name="list.dash" catalog="system" width="128" height="85"/>
         <image name="wineglass.fill" catalog="system" width="95" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

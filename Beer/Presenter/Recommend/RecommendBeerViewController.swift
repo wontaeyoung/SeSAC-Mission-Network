@@ -22,13 +22,12 @@ final class RecommendBeerViewController: UIViewController {
     
     loadingIndicator.startAnimating()
     configureUI()
-    
-    manager.callRequest(type: [Beer].self,
-                        request: .randomBeer,
-                        completionHandler: setData(beers:)
-    )
+    callRequest()
   }
   
+  @IBAction func recommendOtherButtonTapped(_ sender: UIButton) {
+    recommendOtherBeer()
+  }
   private func setData(beers: [Beer]) {
     guard let beer = beers.first else {
       print(#function, "Empty")
@@ -38,11 +37,39 @@ final class RecommendBeerViewController: UIViewController {
     beerImageView.kf.setImage(with: beer.url) { [weak self] _ in
       guard let self else { return }
       
-      loadingIndicator.stopAnimating()
-      loadingIndicator.isHidden = true
+      stopLoading()
       titleLabel.text = beer.name
       descriptionLabel.text = beer.description
     }
+  }
+  
+  private func callRequest() {
+    manager.callRequest(type: [Beer].self,
+                        request: .randomBeer,
+                        completionHandler: setData(beers:)
+    )
+  }
+  
+  private func recommendOtherBeer() {
+    clearData()
+    startLoading()
+    callRequest()
+  }
+  
+  private func clearData() {
+    beerImageView.image = nil
+    titleLabel.text = nil
+    descriptionLabel.text = nil
+  }
+  
+  private func startLoading() {
+    loadingIndicator.startAnimating()
+    loadingIndicator.isHidden = false
+  }
+  
+  private func stopLoading() {
+    loadingIndicator.stopAnimating()
+    loadingIndicator.isHidden = true
   }
 }
 

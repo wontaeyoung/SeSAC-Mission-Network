@@ -11,11 +11,11 @@ import Foundation
 struct APIManager {
   func callRequest(_ request: APIRequest, completionHandler: @escaping (Lotto) -> Void) {
     /// URLComponents로 URL 만들었을 때 실패하는 원인 파악하기
-//    guard let url = try? getURLComponents(with: request).asURL() else {
-//      print(#function, APIError.convertURLFailed.description)
-//      
-//      return
-//    }
+    //    guard let url = try? getURLComponents(with: request).asURL() else {
+    //      print(#function, APIError.convertURLFailed.description)
+    //
+    //      return
+    //    }
     
     let url = getURLComponents(with: request).url
     
@@ -41,7 +41,6 @@ struct APIManager {
     
     return components
   }
-
 }
 
 extension URLComponents {
