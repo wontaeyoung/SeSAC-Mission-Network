@@ -23,6 +23,10 @@ final class BeerTableViewController: UIViewController {
     
     register(cellType: BeerTableViewCell.self)
     configureTableView()
+    callRequest()
+  }
+  
+  private func callRequest() {
     manager.callRequest(
       type: [Beer].self,
       request: .beerList
