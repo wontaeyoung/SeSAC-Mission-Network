@@ -16,5 +16,17 @@ struct Lotto: Codable {
   let drwtNo5: Int
   let drwtNo6: Int
   let bnusNo: Int
+  
+  var lottoNumbers: [Int] {
+    return [
+      drwtNo1,
+      drwtNo2,
+      drwtNo3,
+      drwtNo4,
+      drwtNo5,
+      drwtNo6,
+      bnusNo,
+    ]
+  }
 }
 

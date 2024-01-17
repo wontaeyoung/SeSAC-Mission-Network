@@ -59,13 +59,33 @@ final class LottoViewController: UIViewController {
 // MARK: - Configure
 extension LottoViewController {
   private func setLottoResult(_ lotto: Lotto) {
-    ballLabels[0].text = lotto.drwtNo1.description
-    ballLabels[1].text = lotto.drwtNo2.description
-    ballLabels[2].text = lotto.drwtNo3.description
-    ballLabels[3].text = lotto.drwtNo4.description
-    ballLabels[4].text = lotto.drwtNo5.description
-    ballLabels[5].text = lotto.drwtNo6.description
-    ballLabels[6].text = lotto.bnusNo.description
+    let numbers: [Int] = lotto.lottoNumbers
+    
+    numbers.enumerated().forEach { index, number in
+      configureLottoBall(index: index, number: number)
+    }
+  }
+  
+  private func configureLottoBall(index: Int, number: Int) {
+    ballLabels[index].text = number.description
+    let ballUI = ballUIViews[index]
+    
+    switch number {
+      case 1...10:
+        ballUI.backgroundColor = .systemOrange
+        
+      case 11...20:
+        ballUI.backgroundColor = .systemBlue
+        
+      case 21...30:
+        ballUI.backgroundColor = .systemRed
+        
+      case 31...40:
+        ballUI.backgroundColor = .systemGray
+        
+      default:
+        ballUI.backgroundColor = .systemGreen
+    }
   }
   
   func configureUI() {
@@ -101,7 +121,6 @@ extension LottoViewController {
   
   private func configureBallUIViews() {
     ballUIViews.forEach { view in
-      view.backgroundColor = .orange
       view.clipsToBounds = true
       view.layer.cornerRadius = view.bounds.width / 2
     }
@@ -109,10 +128,10 @@ extension LottoViewController {
   
   private func configureBallLabels() {
     ballLabels.forEach { label in
-      label.font = .boldSystemFont(ofSize: 14)
+      label.font = .boldSystemFont(ofSize: 17)
       label.numberOfLines = 1
       label.textAlignment = .center
-      label.textColor = .black
+      label.textColor = .white
     }
   }
 }
