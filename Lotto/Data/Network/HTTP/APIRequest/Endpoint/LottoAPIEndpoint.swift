@@ -11,7 +11,7 @@ enum LottoAPIEndpoint: Endpoint {
   case getNumber(round: Int)
   
   var path: String {
-    return "common.do"
+    return "/common.do"
   }
   
   var queryItems: [URLQueryItem] {
