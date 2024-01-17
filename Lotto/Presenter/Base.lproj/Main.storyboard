@@ -165,6 +165,27 @@
                                     <constraint firstItem="T4G-eT-hGh" firstAttribute="width" secondItem="T4G-eT-hGh" secondAttribute="height" id="umA-od-QzK"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mlK-KO-hfY">
+                                <rect key="frame" x="170" y="334.33333333333331" width="60" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfV-dR-jSt">
+                                        <rect key="frame" x="4" y="4" width="52" height="52"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="tfV-dR-jSt" firstAttribute="leading" secondItem="mlK-KO-hfY" secondAttribute="leading" constant="4" id="2fj-2d-Y2M"/>
+                                    <constraint firstAttribute="bottom" secondItem="tfV-dR-jSt" secondAttribute="bottom" constant="4" id="I8m-NU-Cif"/>
+                                    <constraint firstItem="tfV-dR-jSt" firstAttribute="top" secondItem="mlK-KO-hfY" secondAttribute="top" constant="4" id="Naf-wb-QgD"/>
+                                    <constraint firstAttribute="height" constant="60" id="OEE-4C-hKs"/>
+                                    <constraint firstAttribute="width" secondItem="mlK-KO-hfY" secondAttribute="height" id="W7k-YN-ehn"/>
+                                    <constraint firstAttribute="width" constant="60" id="l3s-rp-eee"/>
+                                    <constraint firstAttribute="trailing" secondItem="tfV-dR-jSt" secondAttribute="trailing" constant="4" id="yOL-c1-WtA"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -179,9 +200,11 @@
                             <constraint firstItem="dPk-Ou-Skx" firstAttribute="height" secondItem="tua-Zt-n1b" secondAttribute="height" id="Kld-h5-c8R"/>
                             <constraint firstItem="dPk-Ou-Skx" firstAttribute="width" secondItem="tua-Zt-n1b" secondAttribute="width" multiplier="1.1" id="PlF-2j-rko"/>
                             <constraint firstItem="tua-Zt-n1b" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XLE-ZD-aWW"/>
+                            <constraint firstItem="mlK-KO-hfY" firstAttribute="top" secondItem="vfU-w2-Ddf" secondAttribute="bottom" constant="40" id="car-nD-niQ"/>
                             <constraint firstItem="dPk-Ou-Skx" firstAttribute="bottom" secondItem="tua-Zt-n1b" secondAttribute="bottom" id="daA-Mb-drq"/>
                             <constraint firstItem="dPk-Ou-Skx" firstAttribute="top" secondItem="tua-Zt-n1b" secondAttribute="top" id="vbO-6h-jqh"/>
                             <constraint firstItem="tua-Zt-n1b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="vq5-8L-0V8"/>
+                            <constraint firstItem="mlK-KO-hfY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xL7-Rl-hJ8"/>
                         </constraints>
                     </view>
                     <connections>
@@ -200,6 +223,8 @@
                         <outletCollection property="ballLabels" destination="lCv-QC-Bcw" collectionClass="NSMutableArray" id="AGO-tR-CgB"/>
                         <outletCollection property="ballLabels" destination="3FL-5Y-Ago" collectionClass="NSMutableArray" id="4X9-qv-K3o"/>
                         <outletCollection property="ballLabels" destination="oNT-ua-WOn" collectionClass="NSMutableArray" id="0xY-Eq-ro0"/>
+                        <outletCollection property="ballUIViews" destination="mlK-KO-hfY" collectionClass="NSMutableArray" id="Nrn-9L-AR7"/>
+                        <outletCollection property="ballLabels" destination="tfV-dR-jSt" collectionClass="NSMutableArray" id="PZ7-Ab-1L6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

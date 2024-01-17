@@ -25,12 +25,7 @@ final class LottoViewController: UIViewController {
     configureUI()
     
     let startNumber = numberList.first!
-    let request: APIRequest = getLottoRequest(round: startNumber)
-    
-    numberLabel.text = "\(startNumber)회차"
-    manager.callRequest(request) { lotto in
-      self.setLottoResult(lotto)
-    }
+    callRequest(round: startNumber)
   }
   
   override func viewDidLayoutSubviews() {
@@ -50,6 +45,15 @@ final class LottoViewController: UIViewController {
       endpoint: LottoAPIEndpoint.getNumber(round: round)
     )
   }
+  
+  private func callRequest(round: Int) {
+    let request: APIRequest = getLottoRequest(round: round)
+    
+    numberLabel.text = "\(round)회차"
+    manager.callRequest(request) { lotto in
+      self.setLottoResult(lotto)
+    }
+  }
 }
 
 // MARK: - Configure
@@ -61,6 +65,7 @@ extension LottoViewController {
     ballLabels[3].text = lotto.drwtNo4.description
     ballLabels[4].text = lotto.drwtNo5.description
     ballLabels[5].text = lotto.drwtNo6.description
+    ballLabels[6].text = lotto.bnusNo.description
   }
   
   func configureUI() {
@@ -130,12 +135,7 @@ extension LottoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     inComponent component: Int
   ) {
     let number: Int = numberList[row]
-    let request: APIRequest = getLottoRequest(round: number)
-    
-    numberLabel.text = text(row: row)
-    manager.callRequest(request) { lotto in
-      self.setLottoResult(lotto)
-    }
+    callRequest(round: number)
   }
   
   func pickerView(
